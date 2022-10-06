@@ -18,8 +18,8 @@ type Settings struct {
 	colors
 	*cfg.Common
 
-	cellAddresses []interface{}
-	cellNames     []interface{}
+	cellAddresses []any
+	cellNames     []any
 	secretFile    string
 	sheetID       string
 }

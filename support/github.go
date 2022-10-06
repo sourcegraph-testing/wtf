@@ -199,7 +199,7 @@ func (ghUser *GitHubUser) loadContributorStatus(ctx context.Context) (bool, erro
 
 // loadSponsorStatus figures out if this GitHub account has sponsored WTF
 func (ghUser *GitHubUser) loadSponsorStatus(ctx context.Context) (bool, error) {
-	vars := map[string]interface{}{
+	vars := map[string]any{
 		"loginName": githubv4.String(ghUser.loginName),
 	}
 

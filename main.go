@@ -48,7 +48,7 @@ func main() {
 	}
 
 	openFileUtil := config.UString("wtf.openFileUtil", "open")
-	openURLUtil := utils.ToStrs(config.UList("wtf.openUrlUtil", []interface{}{}))
+	openURLUtil := utils.ToStrs(config.UList("wtf.openUrlUtil", []any{}))
 	utils.Init(openFileUtil, openURLUtil)
 
 	/* Initialize the App Manager */

@@ -34,7 +34,7 @@ type colors struct {
 
 type currency struct {
 	displayName string
-	to          []interface{}
+	to          []any
 }
 
 type Settings struct {
@@ -66,11 +66,11 @@ func NewSettingsFromYAML(name string, ymlConfig *config.Config, globalConfig *co
 	settings.currencies = make(map[string]*currency)
 
 	for key, val := range ymlConfig.UMap("currencies") {
-		coercedVal := val.(map[string]interface{})
+		coercedVal := val.(map[string]any)
 
 		currency := &currency{
 			displayName: coercedVal["displayName"].(string),
-			to:          coercedVal["to"].([]interface{}),
+			to:          coercedVal["to"].([]any),
 		}
 
 		settings.currencies[key] = currency

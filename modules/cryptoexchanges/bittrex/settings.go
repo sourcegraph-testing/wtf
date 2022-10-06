@@ -24,7 +24,7 @@ type colors struct {
 
 type currency struct {
 	displayName string
-	market      []interface{}
+	market      []any
 }
 
 type summary struct {
@@ -53,11 +53,11 @@ func NewSettingsFromYAML(name string, ymlConfig *config.Config, globalConfig *co
 
 	settings.summary.currencies = make(map[string]*currency)
 	for key, val := range ymlConfig.UMap("summary") {
-		coercedVal := val.(map[string]interface{})
+		coercedVal := val.(map[string]any)
 
 		currency := &currency{
 			displayName: coercedVal["displayName"].(string),
-			market:      coercedVal["market"].([]interface{}),
+			market:      coercedVal["market"].([]any),
 		}
 
 		settings.summary.currencies[key] = currency

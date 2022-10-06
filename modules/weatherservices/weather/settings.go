@@ -21,7 +21,7 @@ type Settings struct {
 	*cfg.Common
 
 	apiKey   string
-	cityIDs  []interface{}
+	cityIDs  []any
 	language string
 	tempUnit string
 	useEmoji bool

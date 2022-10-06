@@ -13,7 +13,7 @@ func Test_MapToStrs(t *testing.T) {
 		"c": "c",
 	}
 
-	source := make(map[string]interface{})
+	source := make(map[string]any)
 	for _, val := range expected {
 		source[val] = val
 	}
@@ -50,7 +50,7 @@ func Test_IntsToUints(t *testing.T) {
 func Test_ToInts(t *testing.T) {
 	expected := []int{1, 2, 3}
 
-	source := make([]interface{}, len(expected))
+	source := make([]any, len(expected))
 	for idx, val := range expected {
 		source[idx] = val
 	}
@@ -62,12 +62,12 @@ func Test_ToStrs(t *testing.T) {
 	expectedInts := []int{1, 2, 3}
 	expectedStrs := []string{"1", "2", "3"}
 
-	fromInts := make([]interface{}, 3)
+	fromInts := make([]any, 3)
 	for idx, val := range expectedInts {
 		fromInts[idx] = val
 	}
 
-	fromStrs := make([]interface{}, 3)
+	fromStrs := make([]any, 3)
 	for idx, val := range expectedStrs {
 		fromStrs[idx] = val
 	}
@@ -79,7 +79,7 @@ func Test_ToStrs(t *testing.T) {
 func Test_ToUints(t *testing.T) {
 	expected := []uint{1, 2, 3}
 
-	source := make([]interface{}, len(expected))
+	source := make([]any, len(expected))
 	for idx, val := range expected {
 		source[idx] = val
 	}

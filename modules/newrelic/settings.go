@@ -15,9 +15,9 @@ const (
 type Settings struct {
 	*cfg.Common
 
-	apiKey         string        `help:"Your New Relic API token."`
-	deployCount    int           `help:"The number of past deploys to display on screen." optional:"true"`
-	applicationIDs []interface{} `help:"The integer ID of the New Relic application you wish to report on."`
+	apiKey         string `help:"Your New Relic API token."`
+	deployCount    int    `help:"The number of past deploys to display on screen." optional:"true"`
+	applicationIDs []any  `help:"The integer ID of the New Relic application you wish to report on."`
 }
 
 func NewSettingsFromYAML(name string, ymlConfig *config.Config, globalConfig *config.Config) *Settings {

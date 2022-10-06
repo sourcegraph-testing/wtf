@@ -84,7 +84,7 @@ func (widget *MultiSourceWidget) SetDisplayFunction(displayFunc func()) {
 /* -------------------- Unexported Functions -------------------- */
 
 func (widget *MultiSourceWidget) loadSources() {
-	var empty []interface{}
+	var empty []any
 
 	single := widget.moduleConfig.Config.UString(widget.singular, "")
 	multiple := widget.moduleConfig.Config.UList(widget.plural, empty)

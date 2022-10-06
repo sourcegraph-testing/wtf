@@ -23,11 +23,11 @@ type Settings struct {
 	colors
 	*cfg.Common
 
-	domain                  string        `help:"Your Gerrit corporate domain."`
-	password                string        `help:"Your Gerrit HTTP Password."`
-	projects                []interface{} `help:"A list of Gerrit project names to fetch data for."`
-	username                string        `help:"Your Gerrit username."`
-	verifyServerCertificate bool          `help:"Determines whether or not the server’s certificate chain and host name are verified." values:"true or false" optional:"true"`
+	domain                  string `help:"Your Gerrit corporate domain."`
+	password                string `help:"Your Gerrit HTTP Password."`
+	projects                []any  `help:"A list of Gerrit project names to fetch data for."`
+	username                string `help:"Your Gerrit username."`
+	verifyServerCertificate bool   `help:"Determines whether or not the server’s certificate chain and host name are verified." values:"true or false" optional:"true"`
 }
 
 func NewSettingsFromYAML(name string, ymlConfig *config.Config, globalConfig *config.Config) *Settings {

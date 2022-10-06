@@ -27,8 +27,8 @@ type Settings struct {
 	userLogins      []string `help:"Twitch user names" optional:"true"`
 }
 
-func defaultLanguage() []interface{} {
-	var defaults []interface{}
+func defaultLanguage() []any {
+	var defaults []any
 	defaults = append(defaults, "en")
 	return defaults
 }
@@ -45,9 +45,9 @@ func NewSettingsFromYAML(name string, ymlConfig *config.Config, globalConfig *co
 		userAccessToken: ymlConfig.UString("userAccessToken", os.Getenv("TWITCH_USER_ACCESS_TOKEN")),
 		languages:       utils.ToStrs(ymlConfig.UList("languages", defaultLanguage())),
 		streamType:      ymlConfig.UString("streamType", "live"),
-		gameIds:         utils.ToStrs(ymlConfig.UList("gameIds", make([]interface{}, 0))),
-		userIds:         utils.ToStrs(ymlConfig.UList("userIds", make([]interface{}, 0))),
-		userLogins:      utils.ToStrs(ymlConfig.UList("userLogins", make([]interface{}, 0))),
+		gameIds:         utils.ToStrs(ymlConfig.UList("gameIds", make([]any, 0))),
+		userIds:         utils.ToStrs(ymlConfig.UList("userIds", make([]any, 0))),
+		userLogins:      utils.ToStrs(ymlConfig.UList("userLogins", make([]any, 0))),
 	}
 	return &settings
 }

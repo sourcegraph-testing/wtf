@@ -38,7 +38,7 @@ func (widget *Widget) content() (string, string, bool) {
 			fmtStr += "%-12s"
 		}
 
-		vals := []interface{}{
+		vals := []any{
 			widget.RowColor(idx),
 		}
 

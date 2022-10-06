@@ -7,7 +7,7 @@ import (
 
 // StringValueForProperty returns a string value for the given property
 // If the property doesn't exist, it returns an error
-func StringValueForProperty(ref interface{}, propName string) (string, error) {
+func StringValueForProperty(ref any, propName string) (string, error) {
 	v := reflect.ValueOf(ref)
 	refVal := reflect.Indirect(v).FieldByName(propName)
 

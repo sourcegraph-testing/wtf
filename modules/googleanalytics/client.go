@@ -83,7 +83,7 @@ func makeReportServiceV4(secretPath string) (*gaV4.Service, error) {
 }
 
 func getReports(
-	serviceV4 *gaV4.Service, viewIds map[string]interface{}, displayedMonths int, serviceV3 *gaV3.Service,
+	serviceV4 *gaV4.Service, viewIds map[string]any, displayedMonths int, serviceV3 *gaV3.Service,
 ) []websiteReport {
 	startDate := fmt.Sprintf("%s-01", time.Now().AddDate(0, -displayedMonths+1, 0).Format("2006-01"))
 	var websiteReports []websiteReport

@@ -67,7 +67,7 @@ func (widget *Widget) nbascore() (string, string, bool) {
 	if err != nil {
 		return title, err.Error(), true
 	}
-	result := map[string]interface{}{}
+	result := map[string]any{}
 	err = json.Unmarshal(contents, &result)
 	if err != nil {
 		return title, err.Error(), true
@@ -75,14 +75,14 @@ func (widget *Widget) nbascore() (string, string, bool) {
 
 	allGame := fmt.Sprintf(" [%s]", widget.settings.Colors.Subheading) + (cur.Format(utils.FriendlyDateFormat) + "\n\n") + "[white]"
 
-	for _, game := range result["games"].([]interface{}) {
+	for _, game := range result["games"].([]any) {
 		vTeam, hTeam, vScore, hScore := "", "", "", ""
 		quarter := 0.
 		activate := false
-		for keyGame, team := range game.(map[string]interface{}) { // assertion
+		for keyGame, team := range game.(map[string]any) { // assertion
 			switch keyGame {
 			case "vTeam", "hTeam":
-				for keyTeam, stat := range team.(map[string]interface{}) {
+				for keyTeam, stat := range team.(map[string]any) {
 					if keyTeam == "triCode" {
 						if keyGame == "vTeam" {
 							vTeam = stat.(string)
@@ -98,7 +98,7 @@ func (widget *Widget) nbascore() (string, string, bool) {
 					}
 				}
 			case "period":
-				for keyTeam, stat := range team.(map[string]interface{}) {
+				for keyTeam, stat := range team.(map[string]any) {
 					if keyTeam == "current" {
 						quarter = stat.(float64)
 					}

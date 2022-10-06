@@ -38,7 +38,7 @@ func (o *AlertConditionOptions) String() string {
 	if o == nil {
 		return ""
 	}
-	return encodeGetParams(map[string]interface{}{
+	return encodeGetParams(map[string]any{
 		"policy_id": o.policyID,
 		"page":      o.Page,
 	})

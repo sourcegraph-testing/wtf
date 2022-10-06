@@ -147,7 +147,7 @@ func (widget *Widget) unselect() {
 	widget.display()
 }
 
-func (widget *Widget) buildProjectCollection(projectData []interface{}) []*GerritProject {
+func (widget *Widget) buildProjectCollection(projectData []any) []*GerritProject {
 	gerritProjects := []*GerritProject{}
 
 	for _, name := range projectData {

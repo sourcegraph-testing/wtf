@@ -27,7 +27,7 @@ func NewSettingsFromYAML(name string, ymlConfig *config.Config, globalConfig *co
 
 		numberOfResults: ymlConfig.UInt("numberOfResults", 10),
 		key:             ymlConfig.UString("key", os.Getenv("STEAM_API_KEY")),
-		userIds:         utils.ToStrs(ymlConfig.UList("userIds", make([]interface{}, 0))),
+		userIds:         utils.ToStrs(ymlConfig.UList("userIds", make([]any, 0))),
 	}
 	return &settings
 }

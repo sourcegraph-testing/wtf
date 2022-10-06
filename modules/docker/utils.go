@@ -7,7 +7,7 @@ import (
 	"strconv"
 )
 
-func padSlice(padLeft bool, slice interface{}, getter func(i int) string, setter func(i int, newVal string)) {
+func padSlice(padLeft bool, slice any, getter func(i int) string, setter func(i int, newVal string)) {
 	rv := reflect.ValueOf(slice)
 	length := rv.Len()
 	maxLen := 0

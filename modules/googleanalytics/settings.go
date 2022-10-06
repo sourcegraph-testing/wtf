@@ -15,7 +15,7 @@ type Settings struct {
 
 	months         int
 	secretFile     string `help:"Your Google client secret JSON file." values:"A string representing a file path to the JSON secret file."`
-	viewIds        map[string]interface{}
+	viewIds        map[string]any
 	enableRealtime bool
 }
 

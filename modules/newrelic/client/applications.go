@@ -75,7 +75,7 @@ func (o *ApplicationOptions) String() string {
 	if o == nil {
 		return ""
 	}
-	return encodeGetParams(map[string]interface{}{
+	return encodeGetParams(map[string]any{
 		"filter[name]":     o.Filter.Name,
 		"filter[host]":     o.Filter.Host,
 		"filter[ids]":      o.Filter.IDs,

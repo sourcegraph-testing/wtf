@@ -64,7 +64,7 @@ func parseCustomQueries(ymlConfig *config.Config) []customQuery {
 	if customQueries, err := ymlConfig.Map("customQueries"); err == nil {
 		for _, query := range customQueries {
 			c := customQuery{}
-			for key, value := range query.(map[string]interface{}) {
+			for key, value := range query.(map[string]any) {
 				switch key {
 				case "title":
 					c.title = value.(string)

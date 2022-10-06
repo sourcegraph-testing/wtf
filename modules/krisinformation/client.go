@@ -25,20 +25,20 @@ type Krisinformation []struct {
 	Preamble    string    `json:"Preamble"`
 	BodyText    string    `json:"BodyText"`
 	Area        []struct {
-		Type                string      `json:"Type"`
-		Description         string      `json:"Description"`
-		Coordinate          string      `json:"Coordinate"`
-		GeometryInformation interface{} `json:"GeometryInformation"`
+		Type                string `json:"Type"`
+		Description         string `json:"Description"`
+		Coordinate          string `json:"Coordinate"`
+		GeometryInformation any    `json:"GeometryInformation"`
 	} `json:"Area"`
-	Web        string        `json:"Web"`
-	Language   string        `json:"Language"`
-	Event      string        `json:"Event"`
-	SenderName string        `json:"SenderName"`
-	Push       bool          `json:"Push"`
-	BodyLinks  []interface{} `json:"BodyLinks"`
-	SourceID   int           `json:"SourceID"`
-	IsVma      bool          `json:"IsVma"`
-	IsTestVma  bool          `json:"IsTestVma"`
+	Web        string `json:"Web"`
+	Language   string `json:"Language"`
+	Event      string `json:"Event"`
+	SenderName string `json:"SenderName"`
+	Push       bool   `json:"Push"`
+	BodyLinks  []any  `json:"BodyLinks"`
+	SourceID   int    `json:"SourceID"`
+	IsVma      bool   `json:"IsVma"`
+	IsTestVma  bool   `json:"IsTestVma"`
 }
 
 // Client holds or configuration

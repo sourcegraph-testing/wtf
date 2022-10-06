@@ -40,7 +40,7 @@ func NewSettingsFromYAML(name string, ymlConfig *config.Config, globalConfig *co
 		credentials := make(map[string]auth)
 		feeds := make([]string, 0)
 		for url, creds := range ymlConfig.UMap("feeds") {
-			parsed, ok := creds.(map[string]interface{})
+			parsed, ok := creds.(map[string]any)
 			if !ok {
 				continue
 			}

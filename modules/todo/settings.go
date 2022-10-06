@@ -28,7 +28,7 @@ type Settings struct {
 	parseTags         bool
 	tagColor          string
 	tagsAtEnd         bool
-	hideTags          []interface{}
+	hideTags          []any
 	hiddenNumInTitle  bool
 }
 

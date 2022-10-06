@@ -17,7 +17,7 @@ type colors struct {
 	past        string `help:"The color for calendar events that have passed." values:"Any X11 color name." optional:"true"`
 	title       string `help:"The default colour for calendar event titles." values:"Any X11 color name." optional:"true"`
 
-	highlights []interface{} `help:"A list of arrays that define a regular expression pattern and a color. If a calendar event title matches a regular expression, the title will be drawn in that colour. Over-rides the default title colour." values:"An array of a valid regular expression, any X11 color name." optional:"true"`
+	highlights []any `help:"A list of arrays that define a regular expression pattern and a color. If a calendar event title matches a regular expression, the title will be drawn in that colour. Over-rides the default title colour." values:"An array of a valid regular expression, any X11 color name." optional:"true"`
 }
 
 // Settings defines the configuration options for this module

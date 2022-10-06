@@ -57,7 +57,7 @@ func FromTrello(name string, ymlConfig *config.Config, globalConfig *config.Conf
 	cfg.ModuleSecret(name, globalConfig, &apiKey).Load()
 	board := ymlConfig.UString("board")
 	username := ymlConfig.UString("username")
-	var lists []interface{}
+	var lists []any
 	list, err := ymlConfig.String("list")
 	if err == nil {
 		lists = append(lists, list)
