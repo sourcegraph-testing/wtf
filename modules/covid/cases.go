@@ -10,5 +10,5 @@ type Latest struct {
 	Confirmed int `json:"confirmed"`
 	Deaths    int `json:"deaths"`
 	// Not currently used but holds information about the country
-	Locations []interface{} `json:"locations,omitempty"`
+	Locations []any `json:"locations,omitempty"`
 }

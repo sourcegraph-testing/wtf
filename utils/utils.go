@@ -134,7 +134,7 @@ func ReadFileBytes(filePath string) ([]byte, error) {
 }
 
 // ParseJSON is a standard JSON reader from text
-func ParseJSON(obj interface{}, text io.Reader) error {
+func ParseJSON(obj any, text io.Reader) error {
 	d := json.NewDecoder(text)
 	return d.Decode(obj)
 }

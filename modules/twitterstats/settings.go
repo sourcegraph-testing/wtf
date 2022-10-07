@@ -18,7 +18,7 @@ type Settings struct {
 	bearerToken    string
 	consumerKey    string
 	consumerSecret string
-	screenNames    []interface{}
+	screenNames    []any
 }
 
 func NewSettingsFromYAML(name string, ymlConfig *config.Config, globalConfig *config.Config) *Settings {

@@ -14,7 +14,7 @@ const (
 type Settings struct {
 	*cfg.Common
 
-	filePaths   []interface{}
+	filePaths   []any
 	format      bool
 	formatStyle string
 	wrapText    bool

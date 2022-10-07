@@ -40,7 +40,7 @@ func (o *BrowserApplicationsOptions) String() string {
 	if o == nil {
 		return ""
 	}
-	return encodeGetParams(map[string]interface{}{
+	return encodeGetParams(map[string]any{
 		"filter[name]": o.Filter.Name,
 		"filter[ids]":  o.Filter.IDs,
 		"page":         o.Page,

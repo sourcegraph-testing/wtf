@@ -15,9 +15,9 @@ const (
 type Settings struct {
 	*cfg.Common
 
-	apiKey         string        `help:"Your Datadog API key."`
-	applicationKey string        `help:"Your Datadog Application key."`
-	tags           []interface{} `help:"Array of tags you want to query monitors by."`
+	apiKey         string `help:"Your Datadog API key."`
+	applicationKey string `help:"Your Datadog Application key."`
+	tags           []any  `help:"Array of tags you want to query monitors by."`
 }
 
 func NewSettingsFromYAML(name string, ymlConfig *config.Config, globalConfig *config.Config) *Settings {

@@ -56,7 +56,7 @@ func (o *MetricsOptions) String() string {
 	if o == nil {
 		return ""
 	}
-	return encodeGetParams(map[string]interface{}{
+	return encodeGetParams(map[string]any{
 		"name": o.Name,
 		"page": o.Page,
 	})
@@ -66,7 +66,7 @@ func (o *MetricDataOptions) String() string {
 	if o == nil {
 		return ""
 	}
-	return encodeGetParams(map[string]interface{}{
+	return encodeGetParams(map[string]any{
 		"names[]":   o.Names,
 		"values[]":  o.Values,
 		"from":      o.From,

@@ -166,7 +166,7 @@ func (widget *Widget) titleColor(calEvent *CalEvent) string {
 	color := widget.settings.colors.title
 
 	for _, untypedArr := range widget.settings.colors.highlights {
-		highlightElements := utils.ToStrs(untypedArr.([]interface{}))
+		highlightElements := utils.ToStrs(untypedArr.([]any))
 
 		match, _ := regexp.MatchString(
 			strings.ToLower(highlightElements[0]),

@@ -16,7 +16,7 @@ const (
 
 // defaultColumns defines the default set of columns to display in the widget
 // This can be over-ridden in the cofig by explicitly defining a set of columns
-var defaultColumns = []interface{}{
+var defaultColumns = []any{
 	"Name",
 	"Status",
 	"Region.Slug",

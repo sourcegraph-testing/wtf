@@ -45,7 +45,7 @@ func (o *NotificationChannelsOptions) String() string {
 	if o == nil {
 		return ""
 	}
-	return encodeGetParams(map[string]interface{}{
+	return encodeGetParams(map[string]any{
 		"filter[type]": o.Filter.Type,
 		"filter[ids]":  o.Filter.IDs,
 		"page":         o.Page,

@@ -8,7 +8,7 @@ import (
 )
 
 type Todoist struct {
-	projects []interface{}
+	projects []any
 }
 
 func (todo *Todoist) Title() string {

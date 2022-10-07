@@ -52,7 +52,7 @@ func buildLocations(ymlConfig *config.Config) []Clock {
 
 	listLocations := ymlConfig.UList("locations")
 	for _, location := range listLocations {
-		if location, ok := location.(map[string]interface{}); ok {
+		if location, ok := location.(map[string]any); ok {
 			for k, v := range location {
 				name := k
 				zone := v.(string)

@@ -7,7 +7,7 @@ import (
 )
 
 type Resource struct {
-	Response interface{}
+	Response any
 	Raw      string
 }
 

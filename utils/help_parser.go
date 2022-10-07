@@ -12,7 +12,7 @@ import (
 
 /* -------------------- Exported Functions -------------------- */
 
-func HelpFromInterface(item interface{}) string {
+func HelpFromInterface(item any) string {
 	result := ""
 	t := reflect.TypeOf(item)
 

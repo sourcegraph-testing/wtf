@@ -52,7 +52,7 @@ func (widget *Widget) setSummaryList() {
 	}
 }
 
-func (widget *Widget) makeSummaryMarketList(market []interface{}) []*mCurrency {
+func (widget *Widget) makeSummaryMarketList(market []any) []*mCurrency {
 	mCurrencyList := []*mCurrency{}
 
 	for _, marketSymbol := range market {

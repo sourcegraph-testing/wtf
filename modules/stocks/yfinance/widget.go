@@ -55,7 +55,7 @@ func (widget *Widget) content() string {
 	t := table.NewWriter()
 	t.SetStyle(tableStyle())
 	for _, yq := range yquotes {
-		t.AppendRow([]interface{}{
+		t.AppendRow([]any{
 			GetMarketIcon(yq.MarketState),
 			yq.Symbol,
 			fmt.Sprintf("%8.2f %s", yq.MarketPrice, yq.Currency),

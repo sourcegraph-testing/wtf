@@ -62,13 +62,13 @@ type ItemLists struct {
 }
 
 type request struct {
-	requestBody interface{}
+	requestBody any
 	method      string
 	headers     map[string]string
 	url         string
 }
 
-func (*Client) request(req request, result interface{}) error {
+func (*Client) request(req request, result any) error {
 	var reqBody io.Reader
 	if req.requestBody != nil {
 		jsonValues, err := json.Marshal(req.requestBody)

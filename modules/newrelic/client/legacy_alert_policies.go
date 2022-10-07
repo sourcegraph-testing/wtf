@@ -46,7 +46,7 @@ func (o *LegacyAlertPolicyOptions) String() string {
 	if o == nil {
 		return ""
 	}
-	return encodeGetParams(map[string]interface{}{
+	return encodeGetParams(map[string]any{
 		"filter[name]": o.Filter.Name,
 		"page":         o.Page,
 	})

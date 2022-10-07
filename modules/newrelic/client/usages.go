@@ -28,7 +28,7 @@ type usageParams struct {
 }
 
 func (o *usageParams) String() string {
-	return encodeGetParams(map[string]interface{}{
+	return encodeGetParams(map[string]any{
 		"start_date":          o.Start.Format("2006-01-02"),
 		"end_date":            o.End.Format("2006-01-02"),
 		"include_subaccounts": o.IncludeSubaccount,

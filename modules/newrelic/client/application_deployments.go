@@ -47,7 +47,7 @@ func (o *ApplicationDeploymentOptions) String() string {
 	if o == nil {
 		return ""
 	}
-	return encodeGetParams(map[string]interface{}{
+	return encodeGetParams(map[string]any{
 		"page": o.Page,
 	})
 }

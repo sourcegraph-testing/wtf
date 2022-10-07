@@ -11,7 +11,7 @@ import (
 	"time"
 )
 
-func (c *Client) doGet(path string, params fmt.Stringer, out interface{}) error {
+func (c *Client) doGet(path string, params fmt.Stringer, out any) error {
 	var s string
 	if params != nil {
 		s = params.String()
@@ -26,7 +26,7 @@ func (c *Client) doGet(path string, params fmt.Stringer, out interface{}) error 
 	return c.doRequest(req, out)
 }
 
-func (c *Client) doRequest(req *http.Request, out interface{}) error {
+func (c *Client) doRequest(req *http.Request, out any) error {
 	resp, err := c.httpClient.Do(req)
 	if err != nil {
 		return err
@@ -49,7 +49,7 @@ func (c *Client) doRequest(req *http.Request, out interface{}) error {
 	return nil
 }
 
-func encodeGetParams(params map[string]interface{}) string {
+func encodeGetParams(params map[string]any) string {
 	s := url.Values{}
 	for k, v := range params {
 		switch val := v.(type) {

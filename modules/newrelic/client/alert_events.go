@@ -36,7 +36,7 @@ func (o *AlertEventOptions) String() string {
 	if o == nil {
 		return ""
 	}
-	return encodeGetParams(map[string]interface{}{
+	return encodeGetParams(map[string]any{
 		"filter[product]":         o.Filter.Product,
 		"filter[entity_type]":     o.Filter.EntityType,
 		"filter[entity_group_id]": o.Filter.EntityGroupID,

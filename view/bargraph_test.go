@@ -42,7 +42,7 @@ func newTestGraph(graphStars int, graphIcon string) *BarGraph {
 		"testapp",
 		&cfg.Common{
 			Config: &config.Config{
-				Root: map[string]interface{}{
+				Root: map[string]any{
 					"graphStars": graphStars,
 					"graphIcon":  graphIcon,
 				},

@@ -166,7 +166,7 @@ func (project *GitlabProject) loadAssignedIssues() ([]*glb.Issue, error) {
 	return issues, nil
 }
 
-func (project *GitlabProject) loadAuthoredIssues() ([]*glb.Issue, interface{}) {
+func (project *GitlabProject) loadAuthoredIssues() ([]*glb.Issue, any) {
 	state := "opened"
 	opts := glb.ListProjectIssuesOptions{
 		State:    &state,

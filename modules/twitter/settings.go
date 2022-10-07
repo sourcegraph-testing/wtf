@@ -19,7 +19,7 @@ type Settings struct {
 	consumerKey    string
 	consumerSecret string
 	count          int
-	screenNames    []interface{}
+	screenNames    []any
 }
 
 func NewSettingsFromYAML(name string, ymlConfig *config.Config, globalConfig *config.Config) *Settings {

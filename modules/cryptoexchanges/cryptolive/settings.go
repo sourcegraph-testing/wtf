@@ -39,8 +39,8 @@ type Settings struct {
 
 	colors
 
-	currencies map[string]interface{}
-	top        map[string]interface{}
+	currencies map[string]any
+	top        map[string]any
 
 	priceSettings   *price.Settings
 	toplistSettings *toplist.Settings

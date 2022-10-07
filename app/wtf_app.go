@@ -212,7 +212,7 @@ func (wtfApp *WtfApp) watchForConfigChanges() {
 
 				config := cfg.LoadWtfConfigFile(wtfApp.configFilePath)
 				newApp := NewWtfApp(wtfApp.TViewApp, config, wtfApp.configFilePath)
-				openURLUtil := utils.ToStrs(config.UList("wtf.openUrlUtil", []interface{}{}))
+				openURLUtil := utils.ToStrs(config.UList("wtf.openUrlUtil", []any{}))
 				utils.Init(config.UString("wtf.openFileUtil", "open"), openURLUtil)
 
 				newApp.Start()

@@ -13,7 +13,7 @@ type Trello struct {
 	boardName string
 	client    *trello.Client
 	board     string
-	projects  []interface{}
+	projects  []any
 }
 
 func (todo *Trello) Title() string {

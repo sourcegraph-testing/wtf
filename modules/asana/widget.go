@@ -87,7 +87,7 @@ func (widget *Widget) Render() {
 
 func (widget *Widget) Fetch(workspaceId, projectId, mode string, sections []string, allUsers bool) ([]*TaskItem, error) {
 
-	availableModes := map[string]interface{}{
+	availableModes := map[string]any{
 		"project":          nil,
 		"project_sections": nil,
 		"workspace":        nil,
