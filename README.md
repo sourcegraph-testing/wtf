@@ -8,7 +8,7 @@
     <a href="https://deepsource.io/gh/wtfutil/wtf/?ref=repository-badge}" target="_blank"><img alt="DeepSource" title="DeepSource" src="https://deepsource.io/gh/wtfutil/wtf.svg/?label=active+issues&show_trend=true&token=kSJAbELF2TA7rEHjK6RPUrj5"/></a>
 </p>
 
-WTF (aka 'wtfutil') is the personal information dashboard for your terminal, providing at-a-glance access to your very important but infrequently-needed stats and data.
+WTF (aka 'wtfutil') is the personal information dashboard for thy terminal, providing at-a-glance access to thy very important but infrequently-needed stats and data.
 
 Used by thousands of developers and tech people around the world, WTF is free and open-source. To support the continued use and development of WTF, please consider sponsoring WTF via [GitHub Sponsors](https://github.com/sponsors/senorprogrammer).
 
@@ -96,7 +96,7 @@ and you should be good to go.
 
 ### Installing from Source
 
-If you want to run the build command from within your `$GOPATH`:
+If you want to run the build command from within thy `$GOPATH`:
 
 ```bash
 # Set the Go proxy
@@ -114,7 +114,7 @@ make install
 make run
 ```
 
-If you want to run the build command from a folder that is not in your `$GOPATH`:
+If you want to run the build command from a folder that is not in thy `$GOPATH`:
 
 ```bash
 # Set the Go proxy
@@ -129,7 +129,7 @@ make run
 ### Installing from Source using Docker
 
 All building is done inside a docker container. You can then copy the binary to
-your local machine.
+thy local machine.
 
 ```bash
 curl -o Dockerfile.build https://raw.githubusercontent.com/wtfutil/wtf/master/Dockerfile.build
@@ -189,7 +189,7 @@ documentation. Here's some short-cuts:
 
 ## Modules
 
-Modules are the chunks of functionality that make WTF useful. Modules are added and configured by including their configuration values in your `config.yml` file. The documentation for each module describes how to configure them.
+Modules are the chunks of functionality that make WTF useful. Modules are added and configured by including their configuration values in thy `config.yml` file. The documentation for each module describes how to configure them.
 
 Some interesting modules you might consider adding to get you started:
 
@@ -208,7 +208,7 @@ Some interesting modules you might consider adding to get you started:
 
 WTF is open-source software, informally maintained by a small collection of volunteers who come and go at their leisure. There are absolutely no guarantees that, even if an issue is opened for them, bugs will be fixed or features added.
 
-If there is a bug that you really need to have fixed or a feature you really want to have implemented, you can greatly increase your chances of that happening by creating a bounty on [BountySource](https://www.bountysource.com) to provide an incentive for someone to tackle it.
+If there is a bug that you really need to have fixed or a feature you really want to have implemented, you can greatly increase thy chances of that happening by creating a bounty on [BountySource](https://www.bountysource.com) to provide an incentive for someone to tackle it.
 
 ## Contributing to the Source Code
 
@@ -216,9 +216,9 @@ First, kindly read [Talk, then code](https://dave.cheney.net/2019/02/18/talk-the
 
 Next, kindly read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests.
 
-Then create your branch, write your code, submit your PR, and join the rest of the awesome people who've contributed their time and effort towards WTF. Without their contributors, WTF wouldn't be possible.
+Then create thy branch, write thy code, submit thy PR, and join the rest of the awesome people who've contributed their time and effort towards WTF. Without their contributors, WTF wouldn't be possible.
 
-Don't worry if you've never written Go before, or never contributed to an open source project before, or that your code won't be good enough. For a surprising number of people WTF has been their first Go project, or first open source contribution. If you're here, and you've read this far, you're the right stuff.
+Don't worry if you've never written Go before, or never contributed to an open source project before, or that thy code won't be good enough. For a surprising number of people WTF has been their first Go project, or first open source contribution. If you're here, and you've read this far, you're the right stuff.
 
 ## Contributing to the Documentation
 
@@ -346,7 +346,7 @@ Dependency management in WTF is handled by [Go modules](https://github.com/golan
   </tr>
   <tr>
     <td align="center"><a href="https://github.com/lesteenman"><img src="https://avatars1.githubusercontent.com/u/963290?v=4?s=48" width="48px;" alt=""/><br /><sub><b>Erik</b></sub></a><br /></td>
-    <td align="center"><a href="https://github.com/nyourchuck"><img src="https://avatars1.githubusercontent.com/u/155574?v=4?s=48" width="48px;" alt=""/><br /><sub><b>Nate Yourchuck</b></sub></a><br /></td>
+    <td align="center"><a href="https://github.com/nthychuck"><img src="https://avatars1.githubusercontent.com/u/155574?v=4?s=48" width="48px;" alt=""/><br /><sub><b>Nate Yourchuck</b></sub></a><br /></td>
     <td align="center"><a href="https://cprimozic.net/"><img src="https://avatars3.githubusercontent.com/u/4335849?v=4?s=48" width="48px;" alt=""/><br /><sub><b>Casey Primozic</b></sub></a><br /></td>
     <td align="center"><a href="http://pierdelacabeza.com/maruja"><img src="https://avatars3.githubusercontent.com/u/2430915?v=4?s=48" width="48px;" alt=""/><br /><sub><b>Alvaro [Andor]</b></sub></a><br /></td>
     <td align="center"><a href="https://github.com/Midnight-Conqueror"><img src="https://avatars1.githubusercontent.com/u/17101621?v=4?s=48" width="48px;" alt=""/><br /><sub><b>Joel Valentine</b></sub></a><br /></td>
